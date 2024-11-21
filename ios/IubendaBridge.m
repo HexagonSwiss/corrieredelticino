@@ -91,7 +91,6 @@ RCT_EXPORT_METHOD(initialize: (NSDictionary *) config)
     }
   });
 }
-@end
 
 RCT_EXPORT_METHOD(askConsent)
 {
@@ -105,5 +104,7 @@ RCT_EXPORT_METHOD(askConsent)
     }
   });
 }
-
 @end
+
+
+
