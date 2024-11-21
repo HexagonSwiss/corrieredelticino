@@ -11,6 +11,8 @@ import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.soloader.SoLoader
+import com.iubenda.iab.IubendaCMPConfig
+import com.iubenda.iab.IubendaCMP
 
 class MainApplication : Application(), ReactApplication {
 
@@ -18,8 +20,7 @@ class MainApplication : Application(), ReactApplication {
       object : DefaultReactNativeHost(this) {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
-              // Packages that cannot be autolinked yet can be added manually here, for example:
-              // add(MyReactNativePackage())
+              add(IubendaPackager())
             }
 
         override fun getJSMainModuleName(): String = "index"
@@ -40,5 +41,28 @@ class MainApplication : Application(), ReactApplication {
       // If you opted-in for the New Architecture, we load the native entry point for this app.
       load()
     }
+
+
+
+        // Configurazione CMP avverrà qui
+        val config = IubendaCMPConfig.builder()
+            .gdprEnabled(true)            // Abilita la conformità al GDPR
+            .siteId("3841561")           // ID del tuo sito web (o app)
+            .cookiePolicyId("47605511")   // ID della politica dei cookie
+            // .googleAds(true)              // Abilita gli annunci Google
+            .applyStyles(true)            // Applica gli stili CSS alla CMP
+            .build()
+
+            System.out.println("Iubenda CMP initialized")
+            System.out.println(config)
+
+        // Inizializzazione della piattaforma CMP
+        IubendaCMP.initialize(this, config)
+  }
+
+  fun getPackages(): List<ReactPackage> {
+    val packages = PackageList(this).packages
+    packages.add(IubendaPackager()) // Aggiunge il pacchetto personalizzato
+    return packages
   }
 }

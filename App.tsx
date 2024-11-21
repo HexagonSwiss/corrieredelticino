@@ -1,117 +1,93 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, Alert, Button, NativeModules } from 'react-native';
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+class App extends Component {
+  state = {
+    initialized: false, // Stato per verificare se Iubenda è inizializzato
   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  componentDidMount() {
+    const { IubendaBridge } = NativeModules;
+
+    if (!IubendaBridge) {
+      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
+      return;
+    }
+
+    try {
+      // Configurazione da passare al modulo
+      const config = {
+        gdprEnabled: true,
+        forceConsent: true,
+        siteId: '3841561',
+        googleAds: true,
+        applyStyles: true,
+        cookiePolicyId: '47605511',
+        acceptIfDismissed: true,
+        preventDismissWhenLoaded: true,
+        jsonContent: '{"enableTcf": true, "tcfVersion": 2, "perPurposeConsent": true}',
+        skipNoticeWhenOffline: true,
+      };
+
+      // Inizializzazione della CMP tramite il modulo nativo
+      IubendaBridge.initialize(config);
+
+      this.setState({ initialized: true });
+      Alert.alert('Successo', 'Iubenda è stato inizializzato correttamente!');
+    } catch (error) {
+      Alert.alert('Errore', `Impossibile inizializzare Iubenda: ${error}`);
+    }
+  }
+
+  askConsent = () => {
+    const IubendaBridge = NativeModules.IubendaBridge;
+
+    if (!IubendaBridge) {
+      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
+      return;
+    }
+
+    try {
+      IubendaBridge.askConsent();
+    } catch (error) {
+      Alert.alert('Errore', `Impossibile chiedere il consenso: ${error}`);
+    }
+  };
+
+  render() {
+    const { initialized } = this.state;
+
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Hello World</Text>
+        <Text style={styles.status}>
+          {initialized
+            ? 'Iubenda è stato inizializzato correttamente.'
+            : 'Inizializzazione in corso...'}
+        </Text>
+        <Button title="Mostra Consenso" onPress={this.askConsent} />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
   },
-  sectionTitle: {
+  title: {
     fontSize: 24,
-    fontWeight: '600',
+    fontWeight: 'bold',
+    marginBottom: 20,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  status: {
+    fontSize: 16,
+    color: '#666',
   },
 });
 
