@@ -12,8 +12,8 @@
   IubendaCMPConfiguration *config = [[IubendaCMPConfiguration alloc] init];
   config.gdprEnabled = YES;
   config.googleAds = YES;
-  config.siteId = @"12341234";
-  config.cookiePolicyId = @"56785678";
+  config.siteId = @"3841561";
+  config.cookiePolicyId = @"47605511";
   config.applyStyles = YES;
   config.cssFile = [[NSBundle mainBundle] pathForResource:@"custom_style" ofType:@"css"];
   config.jsonFile = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
