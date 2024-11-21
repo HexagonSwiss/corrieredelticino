@@ -65,8 +65,8 @@ function App(): React.JSX.Element {
     IubendaBridge.initialize({
       gdprEnabled: true,
       googleAds: true,
-      siteId: '12341234',
-      cookiePolicyId: '56785678',
+      siteId: '3841561',
+      cookiePolicyId: '47605511',
       applyStyles: true
     });
   }, []);
@@ -76,50 +76,35 @@ function App(): React.JSX.Element {
     IubendaBridge.askConsent();
   };
 
-  return (
-    <View>
-      <Text>Consenso alla privacy</Text>
-      <Button title="Chiedi Consenso" onPress={handleAskConsent} />
-    </View>
-  );
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
-
   // return (
-  //   <SafeAreaView style={backgroundStyle}>
-  //     <StatusBar
-  //       barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-  //       backgroundColor={backgroundStyle.backgroundColor}
-  //     />
-  //     <ScrollView
-  //       contentInsetAdjustmentBehavior="automatic"
-  //       style={backgroundStyle}>
-  //       <Header />
-  //       <View
-  //         style={{
-  //           backgroundColor: isDarkMode ? Colors.black : Colors.white,
-  //         }}>
-  //         <Section title="Step One">
-  //           Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-  //           screen and then come back to see your edits.
-  //         </Section>
-  //         <Section title="See Your Changes">
-  //           <ReloadInstructions />
-  //         </Section>
-  //         <Section title="Debug">
-  //           <DebugInstructions />
-  //         </Section>
-  //         <Section title="Learn More">
-  //           Read the docs to discover what to do next:
-  //         </Section>
-  //         <LearnMoreLinks />
-  //       </View>
-  //     </ScrollView>
-  //   </SafeAreaView>
+  //   <View>
+  //     <Text>Consenso alla privacy</Text>
+  //     <Button title="Chiedi Consenso" onPress={handleAskConsent} />
+  //   </View>
   // );
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        backgroundColor={backgroundStyle.backgroundColor}
+      />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={backgroundStyle}>
+        <Header />
+        <View>
+          <Text>Consenso alla privacy</Text>
+          <Button title="Chiedi Consenso" onPress={handleAskConsent} />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({

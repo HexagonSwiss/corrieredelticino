@@ -92,3 +92,18 @@ RCT_EXPORT_METHOD(initialize: (NSDictionary *) config)
   });
 }
 @end
+
+RCT_EXPORT_METHOD(askConsent)
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    @try {
+      UIViewController *presentedViewController = RCTPresentedViewController();
+      [IubendaCMP askConsentFrom:presentedViewController];
+    }
+    @catch (NSException *exception) {
+      RCTLogError(@"Errore durante askConsent: %@", exception.reason);
+    }
+  });
+}
+
+@end
