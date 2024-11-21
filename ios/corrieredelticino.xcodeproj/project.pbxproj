@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* corrieredelticinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* corrieredelticinoTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-corrieredelticino.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-corrieredelticino.a */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		237CECFC11A0CFAC646434DE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		7699B88040F8A987B510C191 /* libPods-corrieredelticino-corrieredelticinoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-corrieredelticino-corrieredelticinoTests.a */; };
+		30D650111A9E08CABF227721 /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58CD5FEB35083F4C9360961 /* Pods_corrieredelticino_corrieredelticinoTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B23D1ACD2CEF28CF00FC0096 /* iubenda-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D1ACC2CEF28CF00FC0096 /* iubenda-Swift.swift */; };
+		B2CF13052CEF426F00BF78B4 /* IubendaBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF13042CEF426F00BF78B4 /* IubendaBridge.m */; };
+		B2CF13082CEF49DD00BF78B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF13072CEF49DD00BF78B4 /* AppDelegate.m */; };
+		B52F70620249B871FA0634FF /* Pods_corrieredelticino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5D7AEE1E959416EE4290B1 /* Pods_corrieredelticino.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,18 +35,22 @@
 		00E356F21AD99517003FC87E /* corrieredelticinoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = corrieredelticinoTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* corrieredelticino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = corrieredelticino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = corrieredelticino/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = corrieredelticino/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = corrieredelticino/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = corrieredelticino/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = corrieredelticino/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = corrieredelticino/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-corrieredelticino-corrieredelticinoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-corrieredelticino-corrieredelticinoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-corrieredelticino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-corrieredelticino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-corrieredelticino.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-corrieredelticino.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E5D7AEE1E959416EE4290B1 /* Pods_corrieredelticino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = corrieredelticino/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; sourceTree = "<group>"; };
+		B23D1ACB2CEF28CF00FC0096 /* corrieredelticino-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "corrieredelticino-Bridging-Header.h"; sourceTree = "<group>"; };
+		B23D1ACC2CEF28CF00FC0096 /* iubenda-Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iubenda-Swift.swift"; sourceTree = "<group>"; };
+		B2CF13042CEF426F00BF78B4 /* IubendaBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IubendaBridge.m; sourceTree = "<group>"; };
+		B2CF13062CEF43F300BF78B4 /* IubendaBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IubendaBridge.h; sourceTree = "<group>"; };
+		B2CF13072CEF49DD00BF78B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B58CD5FEB35083F4C9360961 /* Pods_corrieredelticino_corrieredelticinoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino_corrieredelticinoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-corrieredelticino-corrieredelticinoTests.a in Frameworks */,
+				30D650111A9E08CABF227721 /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-corrieredelticino.a in Frameworks */,
+				B52F70620249B871FA0634FF /* Pods_corrieredelticino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,13 +94,15 @@
 		13B07FAE1A68108700A75B9A /* corrieredelticino */ = {
 			isa = PBXGroup;
 			children = (
+				B2CF13072CEF49DD00BF78B4 /* AppDelegate.m */,
+				B23D1ACC2CEF28CF00FC0096 /* iubenda-Swift.swift */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				B23D1ACB2CEF28CF00FC0096 /* corrieredelticino-Bridging-Header.h */,
 			);
 			name = corrieredelticino;
 			sourceTree = "<group>";
@@ -103,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-corrieredelticino.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-corrieredelticino-corrieredelticinoTests.a */,
+				5E5D7AEE1E959416EE4290B1 /* Pods_corrieredelticino.framework */,
+				B58CD5FEB35083F4C9360961 /* Pods_corrieredelticino_corrieredelticinoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +120,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B2CF13042CEF426F00BF78B4 /* IubendaBridge.m */,
+				B2CF13062CEF43F300BF78B4 /* IubendaBridge.h */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -209,7 +219,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -396,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				B2CF13082CEF49DD00BF78B4 /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				B23D1ACD2CEF28CF00FC0096 /* iubenda-Swift.swift in Sources */,
+				B2CF13052CEF426F00BF78B4 /* IubendaBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,8 +480,11 @@
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-corrieredelticino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = URPVC5B388;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = corrieredelticino/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -485,6 +500,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = corrieredelticino;
+				SWIFT_OBJC_BRIDGING_HEADER = "corrieredelticino-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -496,8 +512,11 @@
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-corrieredelticino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = URPVC5B388;
 				INFOPLIST_FILE = corrieredelticino/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -512,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = corrieredelticino;
+				SWIFT_OBJC_BRIDGING_HEADER = "corrieredelticino-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -566,6 +586,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -639,6 +670,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
