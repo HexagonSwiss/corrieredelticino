@@ -10,15 +10,15 @@
 {
   self.moduleName = @"corrieredelticino";
 
-  // let config = IubendaCMPConfiguration()
-  // config.gdprEnabled = true
-  // config.googleAds = true
-  // config.siteId = "12341234"
-  // config.cookiePolicyId = "56785678"
-  // config.applyStyles = true
-  // config.cssFile = Bundle.main.path(forResource: "custom_style", ofType: "css")
-  // config.jsonFile = Bundle.main.path(forResource: "config", ofType: "json")
-  // IubendaCMP.initialize(with: config)
+  let config = IubendaCMPConfiguration()
+  config.gdprEnabled = true
+  config.googleAds = true
+  config.siteId = "12341234"
+  config.cookiePolicyId = "56785678"
+  config.applyStyles = true
+  config.cssFile = Bundle.main.path(forResource: "custom_style", ofType: "css")
+  config.jsonFile = Bundle.main.path(forResource: "config", ofType: "json")
+  IubendaCMP.initialize(with: config)
 
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
