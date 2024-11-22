@@ -12,7 +12,7 @@
   IubendaCMPConfiguration *config = [[IubendaCMPConfiguration alloc] init];
   config.gdprEnabled = YES;
   config.googleAds = YES;
-  config.siteId = @"3841561";
+  config.siteId = @"3782169";
   config.cookiePolicyId = @"47605511";
   config.applyStyles = YES;
   config.cssFile = [[NSBundle mainBundle] pathForResource:@"custom_style" ofType:@"css"];
