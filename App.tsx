@@ -4,12 +4,10 @@ import { View, Text, StyleSheet, Alert, Button, NativeModules } from 'react-nati
 import IubendaService from './src';
 
 class App extends Component {
+  state = { initialized: false };
+
   iubendaService: IubendaService | undefined;
-
-  state = {
-    initialized: false, // Stato per verificare se Iubenda è inizializzato
-  };
-
+  
   componentDidMount() {
     this.iubendaService = new IubendaService('3782169','66406702');
     let result = this.iubendaService.initialize();
@@ -27,11 +25,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.status}>
-          {initialized
-            ? 'Iubenda è stato inizializzato correttamente.'
-            : 'Inizializzazione in corso...'}
-        </Text>
+        <Text style={styles.status}> {initialized ? 'Inizializzato.' : 'Inizializzazione in corso...'} </Text>
         <Button title="Mostra Consenso" onPress={this.askConsent} />
       </View>
     );
