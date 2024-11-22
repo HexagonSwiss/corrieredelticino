@@ -47,14 +47,12 @@ class MainApplication : Application(), ReactApplication {
         // Configurazione CMP avverrà qui
         val config = IubendaCMPConfig.builder()
             .gdprEnabled(true)            // Abilita la conformità al GDPR
-            .siteId("3841561")           // ID del tuo sito web (o app)
-            .cookiePolicyId("47605511")   // ID della politica dei cookie
+            .siteId("3782169")           // ID del tuo sito web (o app)
+            .cookiePolicyId("66406702")   // ID della politica dei cookie
             // .googleAds(true)              // Abilita gli annunci Google
             .applyStyles(true)            // Applica gli stili CSS alla CMP
             .build()
 
-            System.out.println("Iubenda CMP initialized")
-            System.out.println(config)
 
         // Inizializzazione della piattaforma CMP
         IubendaCMP.initialize(this, config)

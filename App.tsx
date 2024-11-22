@@ -1,3 +1,4 @@
+import { print } from '@syncfusion/ej2-angular-schedule';
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Alert, Button, NativeModules } from 'react-native';
 
@@ -21,14 +22,15 @@ class App extends Component {
       const config = {
         gdprEnabled: true,
         forceConsent: true,
-        siteId: '3841561',
+        siteId: '3782169',
         googleAds: true,
         applyStyles: true,
-        cookiePolicyId: '47605511',
+        cookiePolicyId: '66406702',
         acceptIfDismissed: true,
         preventDismissWhenLoaded: true,
         jsonContent: '{"enableTcf": true, "tcfVersion": 2, "perPurposeConsent": true}',
         skipNoticeWhenOffline: true,
+        sdk:'abc'
       };
 
       // Inizializzazione della CMP tramite il modulo nativo
