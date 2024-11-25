@@ -1,8 +1,6 @@
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
-
-// #import <iubenda/iubenda-Swift.h>
+#import <iubenda/iubenda-Swift.h>
 
 @implementation AppDelegate
 
@@ -10,20 +8,21 @@
 {
   self.moduleName = @"corrieredelticino";
 
-  let config = IubendaCMPConfiguration()
-  config.gdprEnabled = true
-  config.googleAds = true
-  config.siteId = "3782169"
-  config.cookiePolicyId = "66406702"
-  config.applyStyles = true
-  config.cssFile = Bundle.main.path(forResource: "custom_style", ofType: "css")
-  config.jsonFile = Bundle.main.path(forResource: "config", ofType: "json")
-  IubendaCMP.initialize(with: config)
+  // Inizializzazione Iubenda
+  IubendaCMPConfiguration *config = [[IubendaCMPConfiguration alloc] init];
+  config.gdprEnabled = YES;
+  config.googleAds = YES;
+  config.siteId = @"3782169";
+  config.cookiePolicyId = @"47605511";
+  config.applyStyles = YES;
+  config.cssFile = [[NSBundle mainBundle] pathForResource:@"custom_style" ofType:@"css"];
+  config.jsonFile = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"json"];
+  
+  //[IubendaCMP initializeWithConfiguration:config];
 
-  // You can add your custom initial props in the dictionary below.
-  // They will be passed down to the ViewController used by React Native.
+  // Passaggio delle props iniziali
   self.initialProps = @{};
-
+  
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 

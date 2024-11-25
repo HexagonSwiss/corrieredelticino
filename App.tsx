@@ -1,61 +1,22 @@
-import { print } from '@syncfusion/ej2-angular-schedule';
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Alert, Button, NativeModules } from 'react-native';
 
-
+import IubendaService from './src';
 
 class App extends Component {
-  state = {
-    initialized: false, // Stato per verificare se Iubenda è inizializzato
-  };
+  state = { initialized: false };
 
+  iubendaService: IubendaService | undefined;
+  
   componentDidMount() {
-    const { IubendaBridge } = NativeModules;
+    this.iubendaService = new IubendaService('3782169','66406702');
+    let result = this.iubendaService.initialize();
 
-    if (!IubendaBridge) {
-      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
-      return;
-    }
-
-    try {
-      // Configurazione da passare al modulo
-      const config = {
-        gdprEnabled: true,
-        forceConsent: true,
-        siteId: '3782169',
-        googleAds: true,
-        applyStyles: true,
-        cookiePolicyId: '66406702',
-        acceptIfDismissed: true,
-        preventDismissWhenLoaded: true,
-        jsonContent: '{"enableTcf": true, "tcfVersion": 2, "perPurposeConsent": true}',
-        skipNoticeWhenOffline: true,
-        sdk:'abc'
-      };
-
-      // Inizializzazione della CMP tramite il modulo nativo
-      IubendaBridge.initialize(config);
-
-      this.setState({ initialized: true });
-      Alert.alert('Successo', 'Iubenda è stato inizializzato correttamente!');
-    } catch (error) {
-      Alert.alert('Errore', `Impossibile inizializzare Iubenda: ${error}`);
-    }
+    this.setState({ initialized: result });
   }
 
   askConsent = () => {
-    const IubendaBridge = NativeModules.IubendaBridge;
-
-    if (!IubendaBridge) {
-      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
-      return;
-    }
-
-    try {
-      IubendaBridge.askConsent();
-    } catch (error) {
-      Alert.alert('Errore', `Impossibile chiedere il consenso: ${error}`);
-    }
+    if(this.iubendaService) this.iubendaService.askConsent();
   };
 
   render() {
@@ -64,11 +25,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.status}>
-          {initialized
-            ? 'Iubenda è stato inizializzato correttamente.'
-            : 'Inizializzazione in corso...'}
-        </Text>
+        <Text style={styles.status}> {initialized ? 'Inizializzato.' : 'Inizializzazione in corso...'} </Text>
         <Button title="Mostra Consenso" onPress={this.askConsent} />
       </View>
     );
