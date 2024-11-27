@@ -1,7 +1,7 @@
 #import "AppDelegate.h"
 #import <React/RCTBundleURLProvider.h>
-#import <iubenda/iubenda-Swift.h>
-
+//#import <iubenda/iubenda-Swift.h>
+@import iubenda;
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

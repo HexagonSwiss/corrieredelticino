@@ -1,21 +1,37 @@
 {
-  "name": "corrieredelticino",
-  "version": "0.0.1",
-  "private": true,
+  "name": "hexagonswiss-react-native-iubenda-tcf",
+  "version": "1.0.5",
+  "description": "Un pacchetto per gestire il consenso dei cookie con Iubenda in React Native.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "keywords": [
+    "react-native",
+    "iubenda",
+    "cookie-consent",
+    "privacy"
+  ],
+  "author": "The Hexagon Swiss SAGL",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src --out-dir dist --copy-files"
   },
   "dependencies": {
-    "react": "18.3.1",
-    "react-native": "0.76.2"
+
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.9",
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
@@ -35,5 +51,11 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "files": [
+  "src",
+  "ios",
+  "android",
+  "README.md"
+]
 }

@@ -11,33 +11,62 @@ class IubendaService {
     }
   }
 
-  initialize() {
-    if (!this.IubendaBridge) {
-      return;
-    }
+  //  getConsentStatus() {
+  //   if (!this.IubendaBridge) {
+  //     console.warn('IubendaBridge non disponibile.');
+  //     return Promise.reject('IubendaBridge non disponibile.');
+  //   }
 
+  //   return this.IubendaBridge.getConsentStatus()
+  //     .then(data => {
+  //       console.log('Dati del consenso:', data);
+  //       return data;
+  //     })
+  //     .catch(error => {
+  //       console.error('Index: Errore durante il recupero dello stato del consenso:', error);
+  //       throw error;
+  //     });
+  // }
+
+  // hasConsentForPurpose(purposeId) {
+  //   if (!this.IubendaBridge) {
+  //     console.warn('IubendaBridge non disponibile.');
+  //     return Promise.reject('IubendaBridge non disponibile.');
+  //   }
+
+  //   return this.IubendaBridge.hasConsentForPurpose(purposeId)
+  //     .then(hasConsent => {
+  //       console.log(`Consenso per lo scopo ${purposeId}: ${hasConsent}`);
+  //       return hasConsent;
+  //     })
+  //     .catch(error => {
+  //       console.error(`Errore durante la verifica del consenso per lo scopo ${purposeId}:`, error);
+  //       throw error;
+  //     });
+  // }
+  async initialize() {
+    if (!this.IubendaBridge) {
+      console.error('IubendaBridge non disponibile.');
+      return false;
+    }
+  
     try {
       const config = {
         gdprEnabled: true,
         forceConsent: true,
         siteId: this.siteId,
-        googleAds: true,
-        applyStyles: true,
         cookiePolicyId: this.cookiePolicyId,
-        acceptIfDismissed: true,
-        preventDismissWhenLoaded: true,
-        jsonContent: '{"enableTcf": true, "tcfVersion": 2, "perPurposeConsent": true}',
-        skipNoticeWhenOffline: true,
       };
-
-      this.IubendaBridge.initialize(config);
-      console.log('Successo', `Iubenda è stato inizializzato correttamente!`);
+  
+      await this.IubendaBridge.initialize(config); // Assumendo che `initialize` supporti la gestione asincrona.
+      console.log('Iubenda inizializzato correttamente.');
       return true;
     } catch (error) {
-      console.log('Errore', `Impossibile inizializzare Iubenda: ${error}`);
+      console.error('Errore durante l\'inizializzazione:', error);
       return false;
     }
   }
+  
 
   askConsent() {
     if (!this.IubendaBridge) {
