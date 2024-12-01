@@ -1,9 +1,8 @@
 {
   "name": "hexagonswiss-react-native-iubenda-tcf",
-  "version": "1.0.5",
+  "version": "1.0.12",
   "description": "Un pacchetto per gestire il consenso dei cookie con Iubenda in React Native.",
   "main": "src/index.js",
-  "types": "src/index.d.ts",
   "keywords": [
     "react-native",
     "iubenda",
@@ -24,14 +23,12 @@
     "test": "jest",
     "build": "babel src --out-dir dist --copy-files"
   },
-  "dependencies": {
-
-  },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
@@ -53,9 +50,9 @@
     "node": ">=18"
   },
   "files": [
-  "src",
-  "ios",
-  "android",
-  "README.md"
-]
+    "src",
+    "ios",
+    "android",
+    "README.md"
+  ]
 }

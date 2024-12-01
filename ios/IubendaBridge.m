@@ -131,20 +131,20 @@ RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RC
 }
 
 
-// Metodo per verificare se il consenso è stato dato per uno scopo specifico
-RCT_EXPORT_METHOD(hasConsentForPurpose: (NSString *)purposeId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
-{
-  @try {
-    // Chiamata corretta al metodo isPurposeConsentGivenFor con il parametro purposeId
-    BOOL hasConsent = [IubendaCMP.storage isPurposeConsentGivenFor:[purposeId intValue]];
-    resolve(@(hasConsent));
-  }
-  @catch (NSException *exception) {
-    NSString *errorMessage = [NSString stringWithFormat:@"Errore durante la verifica del consenso per lo scopo %@: %@", purposeId, exception.reason];
-    RCTLogError(@"%@", errorMessage);
-    reject(@"has_consent_error", errorMessage, nil);
-  }
-}
+// // Metodo per verificare se il consenso è stato dato per uno scopo specifico
+// RCT_EXPORT_METHOD(hasConsentForPurpose: (NSString *)purposeId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+// {
+//   @try {
+//     // Chiamata corretta al metodo isPurposeConsentGivenFor con il parametro purposeId
+//     BOOL hasConsent = [IubendaCMP.storage isPurposeConsentGivenFor:[purposeId intValue]];
+//     resolve(@(hasConsent));
+//   }
+//   @catch (NSException *exception) {
+//     NSString *errorMessage = [NSString stringWithFormat:@"Errore durante la verifica del consenso per lo scopo %@: %@", purposeId, exception.reason];
+//     RCTLogError(@"%@", errorMessage);
+//     reject(@"has_consent_error", errorMessage, nil);
+//   }
+// }
 
 @end
 

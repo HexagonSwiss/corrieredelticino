@@ -1,4 +1,4 @@
-import { NativeModules, Alert } from 'react-native';
+import { NativeModules } from 'react-native';
 
 class IubendaService {
   constructor(siteId, cookiePolicyId) {
@@ -6,44 +6,13 @@ class IubendaService {
     this.cookiePolicyId = cookiePolicyId;
     this.IubendaBridge = NativeModules.IubendaBridge;
 
+    // Controllo immediato della disponibilità del moduåçlo nativo
     if (!this.IubendaBridge) {
-      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
+      console.error('Errore: Il modulo IubendaBridge non è disponibile!');
     }
   }
 
-  //  getConsentStatus() {
-  //   if (!this.IubendaBridge) {
-  //     console.warn('IubendaBridge non disponibile.');
-  //     return Promise.reject('IubendaBridge non disponibile.');
-  //   }
-
-  //   return this.IubendaBridge.getConsentStatus()
-  //     .then(data => {
-  //       console.log('Dati del consenso:', data);
-  //       return data;
-  //     })
-  //     .catch(error => {
-  //       console.error('Index: Errore durante il recupero dello stato del consenso:', error);
-  //       throw error;
-  //     });
-  // }
-
-  // hasConsentForPurpose(purposeId) {
-  //   if (!this.IubendaBridge) {
-  //     console.warn('IubendaBridge non disponibile.');
-  //     return Promise.reject('IubendaBridge non disponibile.');
-  //   }
-
-  //   return this.IubendaBridge.hasConsentForPurpose(purposeId)
-  //     .then(hasConsent => {
-  //       console.log(`Consenso per lo scopo ${purposeId}: ${hasConsent}`);
-  //       return hasConsent;
-  //     })
-  //     .catch(error => {
-  //       console.error(`Errore durante la verifica del consenso per lo scopo ${purposeId}:`, error);
-  //       throw error;
-  //     });
-  // }
+  // Inizializzazione del servizio
   async initialize() {
     if (!this.IubendaBridge) {
       console.error('IubendaBridge non disponibile.');
@@ -58,25 +27,45 @@ class IubendaService {
         cookiePolicyId: this.cookiePolicyId,
       };
   
-      await this.IubendaBridge.initialize(config); // Assumendo che `initialize` supporti la gestione asincrona.
+      // Inizializzazione asincrona
+      await this.IubendaBridge.initialize(config);
       console.log('Iubenda inizializzato correttamente.');
       return true;
     } catch (error) {
-      console.error('Errore durante l\'inizializzazione:', error);
+      console.error('Errore durante l\'inizializzazione di Iubenda:', error);
       return false;
     }
   }
-  
 
+  // Chiedi il consenso
   askConsent() {
     if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per chiedere il consenso.');
       return;
     }
 
     try {
       this.IubendaBridge.askConsent();
+      console.log('Consenso richiesto.');
     } catch (error) {
-      Alert.alert('Errore', 'Impossibile chiedere il consenso: ${error}');
+      console.error('Errore durante la richiesta di consenso:', error);
+    }
+  }
+
+  // Recupera lo stato del consenso
+  async getConsentStatus() {
+    if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per ottenere lo stato del consenso.');
+      return Promise.reject('IubendaBridge non disponibile.');
+    }
+
+    try {
+      const status = await this.IubendaBridge.getConsentStatus();
+      console.log('Stato del consenso:', status);
+      return status;
+    } catch (error) {
+      console.error('Errore durante il recupero dello stato del consenso:', error);
+      throw error;
     }
   }
 }

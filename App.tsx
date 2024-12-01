@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Alert, Button, NativeModules } from 'react-native';
 
-import IubendaService from './src';
+import IubendaService from './src/index.js';
 
 class App extends Component {
   state = { initialized: false };
