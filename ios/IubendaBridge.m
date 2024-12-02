@@ -113,12 +113,13 @@ RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RC
     // Esempio di utilizzo delle impostazioni disponibili
     consentStatus[@"consentString"] = [IubendaCMP.storage consentString];
     consentStatus[@"googlePersonalized"] = @([IubendaCMP.storage googlePersonalized]);
-    // consentStatus[@"subjectToGDPR"] = @([IubendaCMP.storage subjectToGDPR]);
+    
+    //consentStatus[@"subjectToGDPR"] = @([IubendaCMP.storage subjectToGDPR]);
     // consentStatus[@"cmpPresent"] = @([IubendaCMP.storage cmpPresent]);
-    // consentStatus[@"vendorConsents"] = [IubendaCMP.storage VendorConsents];
+    //consentStatus[@"vendorConsents"] = @([IubendaCMP.storage VendorConsents]);
     // consentStatus[@"purposeConsents"] = [IubendaCMP.storage PurposeConsents];
-    //consentStatus[@"consentTimestamp"] = @([IubendaCMP.storage consentTimestamp]);
-    //consentStatus[@"preferenceExpressed"] = @([IubendaCMP.storage isPreferenceExpressed]);
+    // consentStatus[@"consentTimestamp"] = @([IubendaCMP.storage consentTimestamp]);
+    // consentStatus[@"preferenceExpressed"] = @([IubendaCMP.storage isPreferenceExpressed]);
     //consentStatus[@"isPurposeConsentGivenFor(1)"] = [IubendaCMP.storage isPurposeConsentGivenFor(1)];
     // Risolve il risultato con lo stato del consenso
     resolve(consentStatus);
