@@ -104,6 +104,20 @@ RCT_EXPORT_METHOD(askConsent)
     }
   });
 }
+
+RCT_EXPORT_METHOD(openPreferences)
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    @try {
+      UIViewController *presentedViewController = RCTPresentedViewController();
+      [IubendaCMP openPreferencesFrom:presentedViewController];
+    }
+    @catch (NSException *exception) {
+      RCTLogError(@"Errore durante openPreferences: %@", exception.reason);
+    }
+  });
+}
+
 RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
   @try {

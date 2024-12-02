@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "React/RCTBridgeModule.h"
+// #import "React/RCTBridgeModule.h"
+#import "RCTBridgeModule.h"
 NS_ASSUME_NONNULL_BEGIN
 @interface IubendaBridge : NSObject <RCTBridgeModule>
 @end

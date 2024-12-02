@@ -52,6 +52,21 @@ class IubendaService {
     }
   }
 
+  // Chiedi il consenso
+  openPreferences() {
+    if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per aprire le preferenze.');
+      return;
+    }
+
+    try {
+      this.IubendaBridge.openPreferences();
+      console.log('Consenso richiesto.');
+    } catch (error) {
+      console.error('Errore durante la richiesta di aprire le preferenze:', error);
+    }
+  }
+
   // Recupera lo stato del consenso
   async getConsentStatus() {
     if (!this.IubendaBridge) {

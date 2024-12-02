@@ -22,6 +22,10 @@ class App extends Component {
     if(this.iubendaService) this.iubendaService.askConsent();
   };
 
+  openPreference = () => {
+    if(this.iubendaService) this.iubendaService.openPreferences();
+  };
+
   consentString = async () => {
     if (this.iubendaService) {
       try {
@@ -41,6 +45,7 @@ class App extends Component {
         <Text style={styles.title}>SDK Iubenda</Text>
         <Text style={styles.status}> {initialized ? 'Inizializzato.' : 'Inizializzazione in corso...'} </Text>
         <Button title="Mostra Consenso" onPress={this.askConsent} />
+        <Button title="Apri Preferenze" onPress={this.openPreference} />
         <Button title="Mostra consent string" onPress={this.consentString} />
         {consentStatus && <Text style={styles.status}>Consenso: {consentStatus}</Text>}
       </View>
