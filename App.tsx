@@ -38,7 +38,7 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Hello World</Text>
+        <Text style={styles.title}>SDK Iubenda</Text>
         <Text style={styles.status}> {initialized ? 'Inizializzato.' : 'Inizializzazione in corso...'} </Text>
         <Button title="Mostra Consenso" onPress={this.askConsent} />
         <Button title="Mostra consent string" onPress={this.consentString} />
