@@ -91,7 +91,7 @@ RCT_EXPORT_METHOD(initialize: (NSDictionary *) config)
     }
   });
 }
-
+ 
 RCT_EXPORT_METHOD(askConsent)
 {
   dispatch_async(dispatch_get_main_queue(), ^{
@@ -104,7 +104,7 @@ RCT_EXPORT_METHOD(askConsent)
     }
   });
 }
-
+ 
 RCT_EXPORT_METHOD(openPreferences)
 {
   dispatch_async(dispatch_get_main_queue(), ^{
@@ -117,7 +117,7 @@ RCT_EXPORT_METHOD(openPreferences)
     }
   });
 }
-
+ 
 RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
   @try {
@@ -144,8 +144,8 @@ RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RC
     reject(@"get_consent_status_error", errorMessage, nil);
   }
 }
-
-
+ 
+ 
 // // Metodo per verificare se il consenso è stato dato per uno scopo specifico
 // RCT_EXPORT_METHOD(hasConsentForPurpose: (NSString *)purposeId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 // {
@@ -160,8 +160,5 @@ RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RC
 //     reject(@"has_consent_error", errorMessage, nil);
 //   }
 // }
-
+ 
 @end
-
-
-
