@@ -1,8 +1,7 @@
 {
   "name": "hexagonswiss-react-native-iubenda-tcf",
-  "version": "0.0.14",
+  "version": "0.0.21",
   "description": "Integration with iubenda SDK",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",

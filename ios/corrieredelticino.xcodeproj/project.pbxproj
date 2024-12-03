@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* corrieredelticinoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* corrieredelticinoTests.m */; };
+		02BA847C89D0A0590B2CC160 /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF3A4D41369C84529F9B50D /* Pods_corrieredelticino_corrieredelticinoTests.framework */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		237CECFC11A0CFAC646434DE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		41660CF97163F09686F6E80B /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3807F75E26C262E85B0E7BCC /* Pods_corrieredelticino_corrieredelticinoTests.framework */; };
-		4C0C4B6A2658D72487183D12 /* Pods_corrieredelticino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0429E1797234C13A51226BC /* Pods_corrieredelticino.framework */; };
+		4CE29381FBCC5CD67FA10155 /* Pods_corrieredelticino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A118DD7EF78C75D8BEAF88CE /* Pods_corrieredelticino.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B23D1ACD2CEF28CF00FC0096 /* iubenda-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D1ACC2CEF28CF00FC0096 /* iubenda-Swift.swift */; };
 		B2CF13052CEF426F00BF78B4 /* IubendaBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF13042CEF426F00BF78B4 /* IubendaBridge.m */; };
@@ -39,19 +39,19 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = corrieredelticino/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = corrieredelticino/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = corrieredelticino/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		20ED3F1FAB4C33B8EF2849EB /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3807F75E26C262E85B0E7BCC /* Pods_corrieredelticino_corrieredelticinoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino_corrieredelticinoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F526F83CD4F88B886A0D051 /* Pods-corrieredelticino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.release.xcconfig"; sourceTree = "<group>"; };
+		49840789DB2D4CD6B884BB70 /* Pods-corrieredelticino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.debug.xcconfig"; sourceTree = "<group>"; };
+		681B42996576C478D437AFA7 /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; sourceTree = "<group>"; };
+		74158CB1C44F34E66CFCB13F /* Pods-corrieredelticino.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = corrieredelticino/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A454417B8B20A36FDE6DD567 /* Pods-corrieredelticino.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino.debug.xcconfig"; sourceTree = "<group>"; };
+		A118DD7EF78C75D8BEAF88CE /* Pods_corrieredelticino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14F30D4DA30BEE817ADB7CA /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B23D1ACB2CEF28CF00FC0096 /* corrieredelticino-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "corrieredelticino-Bridging-Header.h"; sourceTree = "<group>"; };
 		B23D1ACC2CEF28CF00FC0096 /* iubenda-Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iubenda-Swift.swift"; sourceTree = "<group>"; };
 		B2CF13042CEF426F00BF78B4 /* IubendaBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IubendaBridge.m; sourceTree = "<group>"; };
 		B2CF13062CEF43F300BF78B4 /* IubendaBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IubendaBridge.h; sourceTree = "<group>"; };
 		B2CF13072CEF49DD00BF78B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C0429E1797234C13A51226BC /* Pods_corrieredelticino.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA02F102B4B885815300F3BA /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; path = "Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FDF3A4D41369C84529F9B50D /* Pods_corrieredelticino_corrieredelticinoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_corrieredelticino_corrieredelticinoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41660CF97163F09686F6E80B /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */,
+				02BA847C89D0A0590B2CC160 /* Pods_corrieredelticino_corrieredelticinoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C0C4B6A2658D72487183D12 /* Pods_corrieredelticino.framework in Frameworks */,
+				4CE29381FBCC5CD67FA10155 /* Pods_corrieredelticino.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				C0429E1797234C13A51226BC /* Pods_corrieredelticino.framework */,
-				3807F75E26C262E85B0E7BCC /* Pods_corrieredelticino_corrieredelticinoTests.framework */,
+				A118DD7EF78C75D8BEAF88CE /* Pods_corrieredelticino.framework */,
+				FDF3A4D41369C84529F9B50D /* Pods_corrieredelticino_corrieredelticinoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,10 +153,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A454417B8B20A36FDE6DD567 /* Pods-corrieredelticino.debug.xcconfig */,
-				7F526F83CD4F88B886A0D051 /* Pods-corrieredelticino.release.xcconfig */,
-				20ED3F1FAB4C33B8EF2849EB /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */,
-				CA02F102B4B885815300F3BA /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */,
+				49840789DB2D4CD6B884BB70 /* Pods-corrieredelticino.debug.xcconfig */,
+				74158CB1C44F34E66CFCB13F /* Pods-corrieredelticino.release.xcconfig */,
+				B14F30D4DA30BEE817ADB7CA /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */,
+				681B42996576C478D437AFA7 /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,12 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "corrieredelticinoTests" */;
 			buildPhases = (
-				1F554A69A7354C8C69BE92B4 /* [CP] Check Pods Manifest.lock */,
+				0FD9466067C53D23B4C09EC3 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				5525CDD82050B81D05398B26 /* [CP] Embed Pods Frameworks */,
-				1E95BDF4B9892F32F36E6DBC /* [CP] Copy Pods Resources */,
+				07A49CB4BEC5EFAEB3DBE377 /* [CP] Embed Pods Frameworks */,
+				A55396B1EA4A6D642833A148 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,13 +189,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "corrieredelticino" */;
 			buildPhases = (
-				1C486D6075E7009820743CD5 /* [CP] Check Pods Manifest.lock */,
+				022452656C56B09A4CD8952A /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				8A16CAE31CA0086978F5D28A /* [CP] Embed Pods Frameworks */,
-				28722146A99642C2CB135103 /* [CP] Copy Pods Resources */,
+				8A75CCFB6917119702DEDB7D /* [CP] Embed Pods Frameworks */,
+				2DC832B83105B4AF7DBFB57B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,7 +279,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		1C486D6075E7009820743CD5 /* [CP] Check Pods Manifest.lock */ = {
+		022452656C56B09A4CD8952A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,24 +301,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1E95BDF4B9892F32F36E6DBC /* [CP] Copy Pods Resources */ = {
+		07A49CB4BEC5EFAEB3DBE377 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F554A69A7354C8C69BE92B4 /* [CP] Check Pods Manifest.lock */ = {
+		0FD9466067C53D23B4C09EC3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,7 +340,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		28722146A99642C2CB135103 /* [CP] Copy Pods Resources */ = {
+		2DC832B83105B4AF7DBFB57B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,24 +357,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5525CDD82050B81D05398B26 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A16CAE31CA0086978F5D28A /* [CP] Embed Pods Frameworks */ = {
+		8A75CCFB6917119702DEDB7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,6 +372,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino/Pods-corrieredelticino-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55396B1EA4A6D642833A148 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-corrieredelticino-corrieredelticinoTests/Pods-corrieredelticino-corrieredelticinoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -426,7 +426,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20ED3F1FAB4C33B8EF2849EB /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */;
+			baseConfigurationReference = B14F30D4DA30BEE817ADB7CA /* Pods-corrieredelticino-corrieredelticinoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -453,7 +453,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA02F102B4B885815300F3BA /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */;
+			baseConfigurationReference = 681B42996576C478D437AFA7 /* Pods-corrieredelticino-corrieredelticinoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -477,7 +477,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A454417B8B20A36FDE6DD567 /* Pods-corrieredelticino.debug.xcconfig */;
+			baseConfigurationReference = 49840789DB2D4CD6B884BB70 /* Pods-corrieredelticino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -509,7 +509,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F526F83CD4F88B886A0D051 /* Pods-corrieredelticino.release.xcconfig */;
+			baseConfigurationReference = 74158CB1C44F34E66CFCB13F /* Pods-corrieredelticino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
