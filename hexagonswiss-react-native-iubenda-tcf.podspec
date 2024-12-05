@@ -19,7 +19,10 @@ Pod::Spec.new do |s|
   if respond_to?(:install_modules_dependencies, true)
     install_modules_dependencies(s)
   else
-    s.dependency "React-Core"
+    s.dependency 'React-Core'
+    s.dependency 'React-RCTAppDelegate'
+    #s.dependency "React"
+    
     #s.dependency "React-RCTAppDelegate" # Rimosso React-RCTBridge
     #s.dependency "React-RCTSettings"
     #s.dependency "React-RCTText"

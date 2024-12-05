@@ -38,16 +38,29 @@ target 'corrieredelticino' do
     # Pods for testing
   end
 
+  
   post_install do |installer|
-    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
       config[:reactNativePath],
-      :mac_catalyst_enabled => false,
-      # :ccache_enabled => true
+      :mac_catalyst_enabled => false
     )
+    
+    installer.pods_project.targets.each do |target|
+      if target.name == 'hexagonswiss_react_native_iubenda_tcf'
+        target.build_configurations.each do |config|
+          config.build_settings['HEADER_SEARCH_PATHS'] ||= ['$(inherited)']
+          config.build_settings['HEADER_SEARCH_PATHS'] << "$(PODS_ROOT)/Headers/Public/React-Core"
+          config.build_settings['HEADER_SEARCH_PATHS'] << "$(PODS_ROOT)/Headers/Private/React-Core"
+        end
+      end
+    end
   end
+  
+  #pod 'React-Core', :path => '../node_modules/react-native/React'
 
+  # Usa solo la versione corretta di React-RCTAppDelegate
+  pod 'React-RCTAppDelegate', :path => '../node_modules/react-native/Libraries/AppDelegate'
   pod 'IubendaMobileSDK', '2.8.3'
 
 end
