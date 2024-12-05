@@ -1,55 +1,89 @@
-import { NativeModules, Alert } from 'react-native';
-
+import { NativeModules } from 'react-native';
+ 
 class IubendaService {
   constructor(siteId, cookiePolicyId) {
     this.siteId = siteId;
     this.cookiePolicyId = cookiePolicyId;
     this.IubendaBridge = NativeModules.IubendaBridge;
-
+ 
+    // Controllo immediato della disponibilità del moduåçlo nativo
     if (!this.IubendaBridge) {
-      Alert.alert('Errore', 'Il modulo IubendaBridge non è disponibile!');
+      console.error('Errore: Il modulo IubendaBridge non è disponibile!');
     }
   }
-
-  initialize() {
+ 
+  // Inizializzazione del servizio
+  async initialize() {
     if (!this.IubendaBridge) {
-      return;
+      console.error('IubendaBridge non disponibile.');
+      return false;
     }
-
+  
     try {
       const config = {
         gdprEnabled: true,
         forceConsent: true,
         siteId: this.siteId,
-        googleAds: true,
-        applyStyles: true,
         cookiePolicyId: this.cookiePolicyId,
-        acceptIfDismissed: true,
-        preventDismissWhenLoaded: true,
-        jsonContent: '{"enableTcf": true, "tcfVersion": 2, "perPurposeConsent": true}',
-        skipNoticeWhenOffline: true,
       };
-
-      this.IubendaBridge.initialize(config);
-      console.log('Successo', `Iubenda è stato inizializzato correttamente!`);
+  
+      // Inizializzazione asincrona
+      await this.IubendaBridge.initialize(config);
+      console.log('Iubenda inizializzato correttamente.');
       return true;
     } catch (error) {
-      console.log('Errore', `Impossibile inizializzare Iubenda: ${error}`);
+      console.error('Errore durante l\'inizializzazione di Iubenda:', error);
       return false;
     }
   }
-
+ 
+  // Chiedi il consenso
   askConsent() {
     if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per chiedere il consenso.');
       return;
     }
-
+ 
     try {
       this.IubendaBridge.askConsent();
+      console.log('Consenso richiesto.');
     } catch (error) {
-      Alert.alert('Errore', 'Impossibile chiedere il consenso: ${error}');
+      console.error('Errore durante la richiesta di consenso:', error);
+    }
+  }
+ 
+  // Chiedi il consenso
+  openPreferences() {
+    if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per aprire le preferenze.');
+      return;
+    }
+ 
+    try {
+      this.IubendaBridge.openPreferences();
+      console.log('Consenso richiesto.');
+    } catch (error) {
+      console.error('Errore durante la richiesta di aprire le preferenze:', error);
+    }
+  }
+ 
+  // Recupera lo stato del consenso
+  async getConsentStatus() {
+    if (!this.IubendaBridge) {
+      console.warn('IubendaBridge non disponibile per ottenere lo stato del consenso.');
+      return Promise.reject('IubendaBridge non disponibile.');
+    }
+ 
+    try {
+      const status = await this.IubendaBridge.getConsentStatus();
+      console.log('Stato del consenso:', status);
+      return status;
+    } catch (error) {
+      console.error('Errore durante il recupero dello stato del consenso:', error);
+      throw error;
     }
   }
 }
-
+ 
 export default IubendaService;
+ 

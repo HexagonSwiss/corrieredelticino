@@ -91,7 +91,7 @@ RCT_EXPORT_METHOD(initialize: (NSDictionary *) config)
     }
   });
 }
-
+ 
 RCT_EXPORT_METHOD(askConsent)
 {
   dispatch_async(dispatch_get_main_queue(), ^{
@@ -104,7 +104,61 @@ RCT_EXPORT_METHOD(askConsent)
     }
   });
 }
+ 
+RCT_EXPORT_METHOD(openPreferences)
+{
+  dispatch_async(dispatch_get_main_queue(), ^{
+    @try {
+      UIViewController *presentedViewController = RCTPresentedViewController();
+      [IubendaCMP openPreferencesFrom:presentedViewController];
+    }
+    @catch (NSException *exception) {
+      RCTLogError(@"Errore durante openPreferences: %@", exception.reason);
+    }
+  });
+}
+ 
+RCT_EXPORT_METHOD(getConsentStatus: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+  @try {
+    // Recupera lo stato del consenso dai metodi disponibili
+    NSMutableDictionary *consentStatus = [NSMutableDictionary new];
+    
+    // Esempio di utilizzo delle impostazioni disponibili
+    consentStatus[@"consentString"] = [IubendaCMP.storage consentString];
+    consentStatus[@"googlePersonalized"] = @([IubendaCMP.storage googlePersonalized]);
+    
+    //consentStatus[@"subjectToGDPR"] = @([IubendaCMP.storage subjectToGDPR]);
+    // consentStatus[@"cmpPresent"] = @([IubendaCMP.storage cmpPresent]);
+    //consentStatus[@"vendorConsents"] = @([IubendaCMP.storage VendorConsents]);
+    // consentStatus[@"purposeConsents"] = [IubendaCMP.storage PurposeConsents];
+    // consentStatus[@"consentTimestamp"] = @([IubendaCMP.storage consentTimestamp]);
+    // consentStatus[@"preferenceExpressed"] = @([IubendaCMP.storage isPreferenceExpressed]);
+    //consentStatus[@"isPurposeConsentGivenFor(1)"] = [IubendaCMP.storage isPurposeConsentGivenFor(1)];
+    // Risolve il risultato con lo stato del consenso
+    resolve(consentStatus);
+  }
+  @catch (NSException *exception) {
+    NSString *errorMessage = [NSString stringWithFormat:@"getConsentStatus: Errore durante il recupero dello stato del consenso: %@", exception.reason];
+    RCTLogError(@"%@", errorMessage);
+    reject(@"get_consent_status_error", errorMessage, nil);
+  }
+}
+ 
+ 
+// // Metodo per verificare se il consenso è stato dato per uno scopo specifico
+// RCT_EXPORT_METHOD(hasConsentForPurpose: (NSString *)purposeId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+// {
+//   @try {
+//     // Chiamata corretta al metodo isPurposeConsentGivenFor con il parametro purposeId
+//     BOOL hasConsent = [IubendaCMP.storage isPurposeConsentGivenFor:[purposeId intValue]];
+//     resolve(@(hasConsent));
+//   }
+//   @catch (NSException *exception) {
+//     NSString *errorMessage = [NSString stringWithFormat:@"Errore durante la verifica del consenso per lo scopo %@: %@", purposeId, exception.reason];
+//     RCTLogError(@"%@", errorMessage);
+//     reject(@"has_consent_error", errorMessage, nil);
+//   }
+// }
+ 
 @end
-
-
-

@@ -1,7 +1,7 @@
 {
-  "name": "corrieredelticino",
-  "version": "0.0.1",
-  "private": true,
+  "name": "hexagonswiss-react-native-iubenda-tcf",
+  "version": "0.0.22",
+  "description": "Integration with iubenda SDK",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -9,6 +9,9 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "author": "Diego Albini <diego@hexagonswiss.ch> (https://github.com/orgs/HexagonSwiss)",
+  "license": "MIT",
+  "homepage": "https://github.com/HexagonSwiss/corrieredelticino",
   "dependencies": {
     "react": "18.3.1",
     "react-native": "0.76.2"
