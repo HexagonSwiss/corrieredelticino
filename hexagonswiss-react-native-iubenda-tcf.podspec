@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => '15.1' }
-  s.source       = { :git => "https://github.com/HexagonSwiss/corrieredelticino.git", :branch => "main" }
+  s.source       = { :git => "https://github.com/HexagonSwiss/corrieredelticino.git", :tag => "1.0.0" }
   s.source_files = "ios/**/*.{h,m,mm,swift}"
   s.swift_versions = ['5.0']
 
