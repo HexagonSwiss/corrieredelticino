@@ -13,14 +13,14 @@ Pod::Spec.new do |s|
 
   s.platforms    = { :ios => '15.1' }
   s.source       = { :git => "https://github.com/HexagonSwiss/corrieredelticino.git", :tag => "2.0.0" }
-  s.source_files = "ios/**/*.{h,m,mm,swift}"
-  s.swift_versions = ['5.0']
+  s.source_files = "ios/**/*.{h,m,mm}"
+  # s.swift_versions = ['5.0']
 
   if respond_to?(:install_modules_dependencies, true)
     install_modules_dependencies(s)
   else
     s.dependency 'React-Core'
-    s.dependency 'React-RCTAppDelegate'
+    #s.dependency 'React-RCTAppDelegate'
     #s.dependency "React"
     
     #s.dependency "React-RCTAppDelegate" # Rimosso React-RCTBridge

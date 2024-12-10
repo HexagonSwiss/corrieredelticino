@@ -1,10 +1,3 @@
-# Resolve react_native_pods.rb with node to allow for hoisting
-require Pod::Executable.execute_command('node', ['-p',
-  'require.resolve(
-    "react-native/scripts/react_native_pods.rb",
-    {paths: [process.argv[1]]},
-  )', __dir__]).strip
-
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
@@ -13,23 +6,24 @@ prepare_react_native_project!
 
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/facebook/react-native.git'
-
 source "https://github.com/iubenda/cocoapods.git"
+
+
+
 
 linkage = ENV['USE_FRAMEWORKS']
 if linkage != nil
   Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
   use_frameworks! :linkage => linkage.to_sym
+else
+  use_frameworks!
 end
 
 target 'corrieredelticino' do
-  use_frameworks!
-
   config = use_native_modules!
 
   use_react_native!(
     :path => config[:reactNativePath],
-    # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
@@ -38,14 +32,17 @@ target 'corrieredelticino' do
     # Pods for testing
   end
 
-  
+  # Required Pods
+  pod 'React-RCTAppDelegate', :path => '../node_modules/react-native/Libraries/AppDelegate'
+  pod 'IubendaMobileSDK', '2.8.3'
+
   post_install do |installer|
     react_native_post_install(
       installer,
       config[:reactNativePath],
       :mac_catalyst_enabled => false
     )
-    
+
     installer.pods_project.targets.each do |target|
       if target.name == 'hexagonswiss_react_native_iubenda_tcf'
         target.build_configurations.each do |config|
@@ -56,11 +53,4 @@ target 'corrieredelticino' do
       end
     end
   end
-  
-  #pod 'React-Core', :path => '../node_modules/react-native/React'
-
-  # Usa solo la versione corretta di React-RCTAppDelegate
-  pod 'React-RCTAppDelegate', :path => '../node_modules/react-native/Libraries/AppDelegate'
-  pod 'IubendaMobileSDK', '2.8.3'
-
 end
