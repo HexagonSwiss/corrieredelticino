@@ -91,6 +91,33 @@ class IubendaBridge(reactContext: ReactApplicationContext) : ReactContextBaseJav
         IubendaCMP.openPreferences(activity);
     }
 
+    @ReactMethod
+    fun getConsentStatus(promise: Promise) {
+    try {
+        // Recupera lo stato del consenso dai metodi disponibili
+        val consentStatus = mutableMapOf<String, Any?>()
+
+        // Esempio di utilizzo delle impostazioni disponibili
+        consentStatus["consentString"] = IubendaCMP.storage.consentString
+        consentStatus["googlePersonalized"] = IubendaCMP.storage.googlePersonalized()
+
+        //consentStatus["subjectToGDPR"] = IubendaCMP.storage.subjectToGDPR()
+        //consentStatus["cmpPresent"] = IubendaCMP.storage.cmpPresent()
+        //consentStatus["vendorConsents"] = IubendaCMP.storage.vendorConsents()
+        //consentStatus["purposeConsents"] = IubendaCMP.storage.purposeConsents
+        //consentStatus["consentTimestamp"] = IubendaCMP.storage.consentTimestamp()
+        //consentStatus["preferenceExpressed"] = IubendaCMP.storage.isPreferenceExpressed()
+        //consentStatus["isPurposeConsentGivenFor(1)"] = IubendaCMP.storage.isPurposeConsentGivenFor(1)
+
+        // Risolve il risultato con lo stato del consenso
+        promise.resolve(consentStatus)
+    } catch (e: Exception) {
+        val errorMessage = "getConsentStatus: Errore durante il recupero dello stato del consenso: ${e.message}"
+        promise.reject("get_consent_status_error", errorMessage, e)
+    }
+}
+
+
     companion object {
         fun hasValidKey(key: String, options: ReadableMap?): Boolean {
             return options != null && options.hasKey(key) && !options.isNull(key)
