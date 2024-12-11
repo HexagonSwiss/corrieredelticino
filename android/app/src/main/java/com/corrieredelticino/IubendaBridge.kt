@@ -85,6 +85,12 @@ class IubendaBridge(reactContext: ReactApplicationContext) : ReactContextBaseJav
         IubendaCMP.askConsent(activity);
     }
 
+    @ReactMethod
+    fun openPreferences() {
+        val activity = currentActivity
+        IubendaCMP.openPreferences(activity);
+    }
+
     companion object {
         fun hasValidKey(key: String, options: ReadableMap?): Boolean {
             return options != null && options.hasKey(key) && !options.isNull(key)
